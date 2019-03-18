@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GK支付PHP版</title>
+</head>
+<body>
+<form action="http://192.168.4.109:86/api/order/create" method="post" id="frmSubmit">
+    <input type="hidden" name="sign" value="<?=$sign?>"/>
+    <input type="hidden" name="account_id" value="<?=$account_id?>"/>
+    <input type="hidden" name="amount" value="<?=$amount?>"/>
+    <input type="hidden" name="trade_no" value="<?=$trade_no?>"/>
+    <input type="hidden" name="callback_url" value="<?=$callback_url?>"/>
+    <input type="hidden" name="success_url" value="<?=$success_url?>"/>
+    <input type="hidden" name="error_url" value="<?=$error_url?>"/>
+</form>
+<script type="text/javascript">
+    document.getElementById("frmSubmit").submit();
+</script>
+</body>
+</html>
